@@ -61,6 +61,18 @@ services:
     networks:
       doris_net:
         ipv4_address: 172.20.80.3
+  cube:
+    image: cubejs/cube:latest
+    ports:
+      - 4000:4000
+      - 15432:15432
+    environment:
+      - CUBEJS_DEV_MODE=true
+    volumes:
+      - .:/cube/conf
+    networks:
+      doris_net:
+        ipv4_address: 172.20.80.4
 networks:
   doris_net:
     ipam:
