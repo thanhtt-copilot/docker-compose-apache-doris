@@ -62,7 +62,7 @@ services:
       doris_net:
         ipv4_address: 172.20.80.3
   cube:
-    image: cubejs/cube:latest
+    image: cubejs/cube:v1.2.3
     ports:
       - 4000:4000
       - 15432:15432
